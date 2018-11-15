@@ -5,6 +5,8 @@ public class Main {
         Mediator mediator = new Mediator();
         GameLoop gameLoop = new GameLoop(mediator);
 
+        mediator.startGame();
+
         gameLoop.start();
     }
 }

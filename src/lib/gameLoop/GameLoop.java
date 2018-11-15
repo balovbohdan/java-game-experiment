@@ -33,11 +33,11 @@ public class GameLoop {
     }
 
     private void updateGameView() {
-        this.gameMediator.update();
+        this.gameMediator.updateGameView();
     }
 
     private void renderGameView() {
-        this.gameMediator.render();
+        this.gameMediator.renderGameView();
     }
 
     private void updateLastTickStartTime() {
