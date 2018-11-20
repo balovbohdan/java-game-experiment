@@ -1,4 +1,4 @@
-import game.game.Game;
+import game.Game;
 import lib.gameLoop.GameLoop;
 
 class Mediator {

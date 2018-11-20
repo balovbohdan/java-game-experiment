@@ -1,8 +1,9 @@
-package game.game;
+package game;
 
-import game.Window;
-import game.WindowFactory;
+import game.window.Window;
+import game.window.WindowFactory;
 import gameObjectsSystem.GameObjects;
+import gameObjectsSystem.GameObjectsFactory;
 import gameObjectsSystem.gameObjects.Player;
 import lib.gameLoop.GameController;
 
@@ -28,5 +29,5 @@ public class Game implements GameController {
     }
 
     private Window window = WindowFactory.create(this);
-    private GameObjects gameObjects = new GameObjects();
+    private GameObjects gameObjects = GameObjectsFactory.create();
 }

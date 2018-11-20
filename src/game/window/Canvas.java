@@ -1,6 +1,6 @@
-package game;
+package game.window;
 
-import game.game.Game;
+import game.Game;
 import gameObjectsSystem.GameObjects;
 
 import javax.swing.JPanel;

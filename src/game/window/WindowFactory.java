@@ -1,6 +1,7 @@
-package game;
+package game.window;
 
-import game.game.Game;
+import game.Game;
+
 import javax.swing.JFrame;
 
 public class WindowFactory {
