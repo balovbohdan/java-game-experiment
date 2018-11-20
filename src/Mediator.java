@@ -1,22 +1,33 @@
-import lib.gameLoop.GameMediator;
-import window.Window;
+import game.game.Game;
+import lib.gameLoop.GameLoop;
 
-public class Mediator implements GameMediator {
+class Mediator {
     Mediator() {
-        this.window = new Window();
+        this.game = Mediator.createGame();
+        this.gameLoop = Mediator.createGameLoop(this.game);
     }
 
     void startGame() {
-        this.window.show();
+        this.showWindow();
+        this.startGameLoop();
     }
 
-    public void updateGameView() {
-        System.out.println("update");
+    private void startGameLoop() {
+        this.gameLoop.start();
     }
 
-    public void renderGameView() {
-        System.out.println("render");
+    private void showWindow() {
+        this.game.showWindow();
     }
 
-    private Window window;
+    private static Game createGame() {
+        return new Game();
+    }
+
+    private static GameLoop createGameLoop(Game game) {
+        return new GameLoop(game);
+    }
+
+    private Game game;
+    private GameLoop gameLoop;
 }

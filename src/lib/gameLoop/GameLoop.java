@@ -1,8 +1,8 @@
 package lib.gameLoop;
 
 public class GameLoop {
-    public GameLoop(GameMediator gameMediator) {
-        this.gameMediator = gameMediator;
+    public GameLoop(GameController gameController) {
+        this.gameController = gameController;
     }
 
     public void start() {
@@ -33,11 +33,11 @@ public class GameLoop {
     }
 
     private void updateGameView() {
-        this.gameMediator.updateGameView();
+        this.gameController.updateGameObjects();
     }
 
     private void renderGameView() {
-        this.gameMediator.renderGameView();
+        this.gameController.renderGameObjects();
     }
 
     private void updateLastTickStartTime() {
@@ -80,7 +80,7 @@ public class GameLoop {
         return System.nanoTime();
     }
 
-    private GameMediator gameMediator;
+    private GameController gameController;
 
     private boolean isRunning = false;
 
