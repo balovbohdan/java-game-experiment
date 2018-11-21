@@ -35,7 +35,7 @@ public class WindowFactory {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
-        window.setResizable(false);
+        window.setResizable(true);
 
         return window;
     }
