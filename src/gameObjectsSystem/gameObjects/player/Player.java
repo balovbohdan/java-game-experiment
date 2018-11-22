@@ -22,16 +22,16 @@ public class Player extends GameObject {
         Boolean is_d = keyboardMap.is_d();
 
         if (is_w)
-            this.y -= this.dy;
+            this.y -= Player.dy;
 
         if (is_s)
-            this.y += this.dy;
+            this.y += Player.dy;
 
         if (is_a)
-            this.x -= this.dx;
+            this.x -= Player.dx;
 
         if (is_d)
-            this.x += this.dx;
+            this.x += Player.dx;
     }
 
     public void render(Graphics graphics) {
@@ -56,11 +56,11 @@ public class Player extends GameObject {
         }
     }
 
-    private int dx = 1;
-    private int dy = 1;
-
     private int x = 0;
     private int y = 0;
 
     private SpriteSheet spriteSheet = Player.createSpriteSheet();
+
+    private static final int dx = 1;
+    private static final int dy = 1;
 }
