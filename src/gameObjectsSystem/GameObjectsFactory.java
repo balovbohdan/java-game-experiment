@@ -1,7 +1,7 @@
 package gameObjectsSystem;
 
 import game.Game;
-import gameObjectsSystem.gameObjects.Player;
+import gameObjectsSystem.gameObjects.player.Player;
 
 public class GameObjectsFactory {
     public static GameObjects create(Game game) {

@@ -1,10 +1,12 @@
-package gameObjectsSystem.gameObjects;
+package gameObjectsSystem.gameObjects.player;
 
 import game.Game;
 import gameObjectsSystem.GameObject;
+import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
 import lib.eventsManagers.keyboard.KeyboardMap;
 
-import java.awt.Graphics;
+import java.awt.*;
+import java.io.IOException;
 
 public class Player extends GameObject {
     public Player(Game game) {
@@ -33,7 +35,9 @@ public class Player extends GameObject {
     }
 
     public void render(Graphics graphics) {
-        graphics.drawRect(this.x, this.y, 100, 100);
+        Image image = this.spriteSheet.getItem();
+
+        graphics.drawImage(image, this.x, this.y, null);
     }
 
     private KeyboardMap getKeyboardMap() {
@@ -42,9 +46,21 @@ public class Player extends GameObject {
         return game.getKeyboardMap();
     }
 
+    private static SpriteSheet createSpriteSheet() {
+        try {
+            return new SpriteSheet();
+        } catch (IOException exception) {
+            System.out.println(exception.getMessage());
+
+            return null;
+        }
+    }
+
     private int dx = 1;
     private int dy = 1;
 
     private int x = 0;
     private int y = 0;
+
+    private SpriteSheet spriteSheet = Player.createSpriteSheet();
 }
