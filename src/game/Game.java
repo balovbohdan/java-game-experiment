@@ -24,6 +24,10 @@ public class Game implements GameController {
         this.window.setVisible(true);
     }
 
+    public Window getWindow() {
+        return this.window;
+    }
+
     public KeyboardMap getKeyboardMap() {
         return this.window.getKeyboardMap();
     }

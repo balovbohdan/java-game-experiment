@@ -5,7 +5,8 @@ import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
 import lib.eventsManagers.keyboard.KeyboardMap;
 
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.io.IOException;
 
 public class Player extends GameObject {

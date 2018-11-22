@@ -1,6 +1,5 @@
 package game.window;
 
-import gameObjectsSystem.GameObject;
 import gameObjectsSystem.GameObjects;
 
 import java.awt.Graphics;
@@ -18,11 +17,7 @@ class Renderer {
     }
 
     private void render() {
-        this.gameObjects.forEach((GameObject gameObject) -> {
-            gameObject.render(this.graphics);
-
-            return true;
-        });
+        this.gameObjects.render(this.graphics);
     }
 
     private Graphics graphics;

@@ -1,7 +1,7 @@
 import game.Game;
 import lib.gameLoop.GameLoop;
 
-class Mediator {
+public class Mediator {
     Mediator() {
         this.game = Mediator.createGame();
         this.gameLoop = Mediator.createGameLoop(this.game);

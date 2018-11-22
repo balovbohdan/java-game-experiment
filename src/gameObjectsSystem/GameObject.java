@@ -13,7 +13,7 @@ public abstract class GameObject extends Component {
         this.game = game;
     }
 
-    public Game getGame() {
+    protected Game getGame() {
         return this.game;
     }
 
