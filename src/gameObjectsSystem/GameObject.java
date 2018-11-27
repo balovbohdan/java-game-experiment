@@ -3,9 +3,8 @@ package gameObjectsSystem;
 import game.Game;
 
 import java.awt.Graphics;
-import java.awt.Component;
 
-public abstract class GameObject extends Component {
+public abstract class GameObject {
     public abstract void update();
     public abstract void render(Graphics graphics);
 

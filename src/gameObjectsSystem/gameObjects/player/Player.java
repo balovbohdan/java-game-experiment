@@ -3,6 +3,7 @@ package gameObjectsSystem.gameObjects.player;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
+import lib.coords.Coords;
 import lib.eventsManagers.keyboard.KeyboardMap;
 
 import java.awt.Graphics;
@@ -12,39 +13,35 @@ import java.io.IOException;
 public class Player extends GameObject {
     public Player(Game game) {
         super(game);
+
+        this.keyboardMap = game.getKeyboardMap();
+        this.coordsManager = new CoordsManager(this);
+    }
+
+    int getSpeed() {
+        return 2;
     }
 
     public void update() {
-        KeyboardMap keyboardMap = this.getKeyboardMap();
-
-        Boolean is_w = keyboardMap.is_w();
-        Boolean is_s = keyboardMap.is_s();
-        Boolean is_a = keyboardMap.is_a();
-        Boolean is_d = keyboardMap.is_d();
-
-        if (is_w)
-            this.y -= Player.dy;
-
-        if (is_s)
-            this.y += Player.dy;
-
-        if (is_a)
-            this.x -= Player.dx;
-
-        if (is_d)
-            this.x += Player.dx;
+        this.coordsManager.updateCoords();
     }
 
     public void render(Graphics graphics) {
         Image image = this.spriteSheet.getItem();
+        Coords coords = this.getCoords();
 
-        graphics.drawImage(image, this.x, this.y, null);
+        int x = coords.getX();
+        int y = coords.getY();
+
+        graphics.drawImage(image, x, y, null);
     }
 
-    private KeyboardMap getKeyboardMap() {
-        Game game = this.getGame();
+    KeyboardMap getKeyboardMap() {
+        return this.keyboardMap;
+    }
 
-        return game.getKeyboardMap();
+    private Coords getCoords() {
+        return this.coordsManager.getCoords();
     }
 
     private static SpriteSheet createSpriteSheet() {
@@ -57,11 +54,8 @@ public class Player extends GameObject {
         }
     }
 
-    private int x = 0;
-    private int y = 0;
+    private KeyboardMap keyboardMap;
+    private CoordsManager coordsManager;
 
     private SpriteSheet spriteSheet = Player.createSpriteSheet();
-
-    private static final int dx = 1;
-    private static final int dy = 1;
 }
