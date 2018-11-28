@@ -19,6 +19,12 @@ public class SpriteSheetManager {
         int x = this.calcItemXCoord(id);
         int y = this.calcItemYCoord(id);
 
+        System.out.println(itemWidth);
+
+        if (itemWidth == 64) {
+            System.out.println("here");
+        }
+
         return this.getSubimage(x, y, itemWidth, itemHeight);
     }
 

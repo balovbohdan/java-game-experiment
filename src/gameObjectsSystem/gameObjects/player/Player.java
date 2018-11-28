@@ -51,8 +51,8 @@ public class Player extends GameObject {
     private static SpriteSheet createSpriteSheet() {
         try {
             return new SpriteSheet();
-        } catch (IOException exception) {
-            System.out.println(exception.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
 
             return null;
         }
