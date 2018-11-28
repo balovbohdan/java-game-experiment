@@ -6,22 +6,6 @@ public class Coords {
         this.y = y;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public void updateX(double dx) {
-        this.updateX(dx, this.defaultSpeed);
-    }
-
-    public void updateY(double dy) {
-        this.updateY(dy, this.defaultSpeed);
-    }
-
     public void updateX(double dx, double speed) {
         this.x += dx * speed;
     }
@@ -36,10 +20,6 @@ public class Coords {
 
     public int getY() {
         return this.y;
-    }
-
-    public void setDefaultSpeed(double speed) {
-        this.defaultSpeed = speed;
     }
 
     public IsometricCoords toIsometric() {
@@ -60,6 +40,4 @@ public class Coords {
 
     private int x;
     private int y;
-
-    private double defaultSpeed = 1;
 }

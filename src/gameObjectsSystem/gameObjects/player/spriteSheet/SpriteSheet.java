@@ -2,7 +2,7 @@ package gameObjectsSystem.gameObjects.player.spriteSheet;
 
 import lib.spriteSheetManager.SpriteSheetManager;
 
-import java.awt.Image;
+import java.awt.*;
 import java.io.IOException;
 
 public class SpriteSheet {

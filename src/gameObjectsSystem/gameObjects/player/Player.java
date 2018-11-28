@@ -3,11 +3,12 @@ package gameObjectsSystem.gameObjects.player;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
+import lib.coords.CartesianCoords;
 import lib.coords.Coords;
+import lib.coords.IsometricCoords;
 import lib.eventsManagers.keyboard.KeyboardMap;
 
-import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.*;
 import java.io.IOException;
 
 public class Player extends GameObject {
@@ -22,6 +23,14 @@ public class Player extends GameObject {
         return 2;
     }
 
+    public IsometricCoords getCoords() {
+        return this.coordsManager.getCoords();
+    }
+
+    public Dimension getDimension() {
+        return new Dimension(299, 240);
+    }
+
     public void update() {
         this.coordsManager.updateCoords();
     }
@@ -34,14 +43,12 @@ public class Player extends GameObject {
         int y = coords.getY();
 
         graphics.drawImage(image, x, y, null);
+//        graphics.setColor(Color.CYAN);
+//        graphics.fillRect(x, y, 299, 240);
     }
 
     KeyboardMap getKeyboardMap() {
         return this.keyboardMap;
-    }
-
-    private Coords getCoords() {
-        return this.coordsManager.getCoords();
     }
 
     private static SpriteSheet createSpriteSheet() {

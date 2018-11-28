@@ -1,7 +1,8 @@
 package gameObjectsSystem.gameObjects.player;
 
-import lib.coords.Coords;
+import lib.BoundingRect;
 import lib.coords.CartesianCoords;
+import lib.coords.IsometricCoords;
 import lib.eventsManagers.keyboard.KeyboardMap;
 
 class CoordsManager {
@@ -10,7 +11,7 @@ class CoordsManager {
         this.keyboardMap = player.getKeyboardMap();
     }
 
-    Coords getCoords() {
+    IsometricCoords getCoords() {
         return this.coords.toIsometric();
     }
 
@@ -40,19 +41,65 @@ class CoordsManager {
     }
 
     private Boolean needMoveToNorth() {
-        return this.keyboardMap.is_w();
+        return this.keyboardMap.is_w()
+            && !this.isAtTopBorder()
+            && !this.isAtRightBorder();
     }
 
     private Boolean needMoveToSouth() {
-        return this.keyboardMap.is_s();
+        return this.keyboardMap.is_s()
+            && !this.isAtBottomBorder()
+            && !this.isAtLeftBorder();
     }
 
     private Boolean needMoveToWest() {
-        return this.keyboardMap.is_a();
+        return this.keyboardMap.is_a()
+            && !this.isAtTopBorder()
+            && !this.isAtLeftBorder();
     }
 
     private Boolean needMoveToEast() {
-        return this.keyboardMap.is_d();
+        return this.keyboardMap.is_d()
+            && !this.isAtRightBorder()
+            && !this.isAtBottomBorder();
+    }
+
+    private Boolean isAtTopBorder() {
+        BoundingRect boundingRect = this.getPlayerBoundingRect();
+
+        int top = boundingRect.getTop();
+
+//        System.out.println("Top: " + top);
+
+        return top <= 0;
+    }
+
+    private Boolean isAtBottomBorder() {
+        BoundingRect boundingRect = this.getPlayerBoundingRect();
+
+        int bottom = boundingRect.getBottom();
+
+//        System.out.println(bottom);
+
+        return bottom <= 0;
+    }
+
+    private Boolean isAtLeftBorder() {
+        BoundingRect boundingRect = this.getPlayerBoundingRect();
+
+        int left = boundingRect.getLeft();
+
+//        System.out.println("Left: " + left);
+
+        return left <= 0;
+    }
+
+    private Boolean isAtRightBorder() {
+        BoundingRect boundingRect = this.getPlayerBoundingRect();
+
+        int right = boundingRect.getRight();
+
+        return right <= 0;
     }
 
     private void updateXCoord() {
@@ -65,6 +112,10 @@ class CoordsManager {
         double playerSpeed = this.getPlayerSpeed();
 
         this.coords.updateY(this.dy, playerSpeed);
+    }
+
+    private BoundingRect getPlayerBoundingRect() {
+        return this.player.getBoundingRect();
     }
 
     private double getPlayerSpeed() {

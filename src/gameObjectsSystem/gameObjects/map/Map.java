@@ -4,9 +4,10 @@ import game.Game;
 import game.window.Window;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.GameObjects;
+import lib.coords.Coords;
+import lib.coords.IsometricCoords;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class Map extends GameObject {
     public Map(Game game) {
@@ -14,6 +15,14 @@ public class Map extends GameObject {
 
         this.window = game.getWindow();
         this.gameObjects = GameObjectsFactory.create(game);
+    }
+
+    public IsometricCoords getCoords() {
+        return new IsometricCoords(0, 0);
+    }
+
+    public Dimension getDimension() {
+        return new Dimension(299, 240);
     }
 
     public void update() {
