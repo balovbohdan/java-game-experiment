@@ -3,7 +3,6 @@ package gameObjectsSystem.gameObjects.player;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
-import lib.coords.CartesianCoords;
 import lib.coords.Coords;
 import lib.coords.IsometricCoords;
 import lib.eventsManagers.keyboard.KeyboardMap;
@@ -43,8 +42,6 @@ public class Player extends GameObject {
         int y = coords.getY();
 
         graphics.drawImage(image, x, y, null);
-//        graphics.setColor(Color.CYAN);
-//        graphics.fillRect(x, y, 299, 240);
     }
 
     KeyboardMap getKeyboardMap() {

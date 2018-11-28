@@ -2,8 +2,6 @@ package gameObjectsSystem;
 
 import game.Game;
 import lib.BoundingRect;
-import lib.coords.CartesianCoords;
-import lib.coords.Coords;
 import lib.coords.IsometricCoords;
 
 import javax.swing.*;

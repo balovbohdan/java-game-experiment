@@ -1,6 +1,5 @@
 package lib;
 
-import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;

@@ -69,8 +69,6 @@ class CoordsManager {
 
         int top = boundingRect.getTop();
 
-//        System.out.println("Top: " + top);
-
         return top <= 0;
     }
 
@@ -79,8 +77,6 @@ class CoordsManager {
 
         int bottom = boundingRect.getBottom();
 
-//        System.out.println(bottom);
-
         return bottom <= 0;
     }
 
@@ -88,8 +84,6 @@ class CoordsManager {
         BoundingRect boundingRect = this.getPlayerBoundingRect();
 
         int left = boundingRect.getLeft();
-
-//        System.out.println("Left: " + left);
 
         return left <= 0;
     }
