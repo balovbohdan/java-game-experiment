@@ -1,7 +1,9 @@
 package gameObjectsSystem.gameObjects.player.spriteSheet;
 
-public class Params extends lib.spriteSheetManager.Params {
-    public int getColsQty() {
-        return 3;
+class Params extends lib.spriteSheetManager.Params {
+    Params(int width, int height) {
+        super(width, height,Params.COLS_QTY);
     }
+
+    private static final int COLS_QTY = 3;
 }

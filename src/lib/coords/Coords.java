@@ -1,5 +1,7 @@
 package lib.coords;
 
+import java.awt.*;
+
 public class Coords {
     public Coords(int x, int y) {
         this.x = x;
@@ -20,6 +22,11 @@ public class Coords {
 
     public int getY() {
         return this.y;
+    }
+
+    public void addOffsets(Point offset) {
+        this.x += offset.getX();
+        this.y += offset.getY();
     }
 
     public IsometricCoords toIsometric() {

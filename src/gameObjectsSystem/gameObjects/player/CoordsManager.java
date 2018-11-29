@@ -9,6 +9,13 @@ class CoordsManager {
     CoordsManager(Player player) {
         this.player = player;
         this.keyboardMap = player.getKeyboardMap();
+        this.coords = new CartesianCoords(0, 0);
+    }
+
+    CoordsManager(Player player, IsometricCoords initialCoords){
+        this.player = player;
+        this.keyboardMap = player.getKeyboardMap();
+        this.coords = initialCoords.toCartesian();
     }
 
     IsometricCoords getCoords() {
@@ -122,5 +129,5 @@ class CoordsManager {
     private double dx = 0;
     private double dy = 0;
 
-    private CartesianCoords coords = new CartesianCoords(0, 0);
+    private CartesianCoords coords;
 }

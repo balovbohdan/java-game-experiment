@@ -15,7 +15,15 @@ public class Player extends GameObject {
         super(game);
 
         this.keyboardMap = game.getKeyboardMap();
-        this.coordsManager = new CoordsManager(this);
+        this.spriteSheet = Player.createSpriteSheet(this);
+        this.coordsManager = Player.createCoordsManager(this);
+    }
+
+    public Player(Game game, IsometricCoords initialCoords) {
+        super(game, initialCoords);
+
+        this.keyboardMap = game.getKeyboardMap();
+        this.coordsManager = new CoordsManager(this, initialCoords);
     }
 
     int getSpeed() {
@@ -48,9 +56,9 @@ public class Player extends GameObject {
         return this.keyboardMap;
     }
 
-    private static SpriteSheet createSpriteSheet() {
+    private static SpriteSheet createSpriteSheet(Player player) {
         try {
-            return new SpriteSheet();
+            return new SpriteSheet(player);
         } catch (IOException e) {
             System.out.println(e.getMessage());
 
@@ -58,8 +66,11 @@ public class Player extends GameObject {
         }
     }
 
+    private static CoordsManager createCoordsManager(Player player) {
+        return new CoordsManager(player);
+    }
+
     private KeyboardMap keyboardMap;
     private CoordsManager coordsManager;
-
-    private SpriteSheet spriteSheet = Player.createSpriteSheet();
+    private SpriteSheet spriteSheet;
 }

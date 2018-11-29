@@ -8,11 +8,20 @@ public class GameObjects {
         this.gameObjects.add(gameObject);
     }
 
-//    public void add(GameObjects gameObjects) {
-//        ArrayList<GameObject> gameObjectsRaw = gameObjects.getGameObjects();
-//
-//        this.gameObjects.addAll(gameObjectsRaw);
-//    }
+    public GameObject get(int index) {
+        return this.gameObjects.get(index);
+    }
+
+    public GameObject getLast() {
+        int gameObjectsQty = this.gameObjects.size();
+
+        if (gameObjectsQty == 0)
+            return null;
+
+        int lastIndex = gameObjectsQty - 1;
+
+        return this.gameObjects.get(lastIndex);
+    }
 
     public void update() {
         for (GameObject gameObject : this.gameObjects)
