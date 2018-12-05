@@ -1,7 +1,6 @@
 package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import gameObjectsSystem.GameObject;
-import gameObjectsSystem.gameObjects.TileDimension;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;
@@ -41,8 +40,13 @@ class InitialCoordsCalculator {
         double xOffset = chainingOffsets.getX();
         double yOffset = chainingOffsets.getY();
 
-        int x = (int) Math.round((TileDimension.WIDTH + xOffset) * this.col + this.extraXOffset);
-        int y = (int) Math.round((TileDimension.HEIGHT + yOffset) * this.row);
+        Dimension gameObjectDimension = this.gameObject.getDimension();
+
+        int width = (int) gameObjectDimension.getWidth();
+        int height = (int) gameObjectDimension.getHeight();
+
+        int x = (int) Math.round((width + xOffset) * this.col + this.extraXOffset);
+        int y = (int) Math.round((height + yOffset) * this.row);
 
         return new IsometricCoords(x, y);
     }
@@ -52,8 +56,12 @@ class InitialCoordsCalculator {
      * empty space between isometric tiles.
      */
     private int calcExtraXOffset() {
+        Dimension gameObjectDimension = this.gameObject.getDimension();
+
+        int width = (int) gameObjectDimension.getWidth();
+
         return this.row % 2 == 0
-            ? -TileDimension.WIDTH / 2
+            ? -width / 2
             : 0;
     }
 

@@ -7,15 +7,15 @@ public abstract class Params {
         this.colsQty = colsQty;
     }
 
-    public int getColsQty() {
+    int getColsQty() {
         return this.colsQty;
     }
 
-    public int getItemWidth() {
+    int getItemWidth() {
         return this.width;
     }
 
-    public int getItemHeight() {
+    int getItemHeight() {
         return this.height;
     }
 
