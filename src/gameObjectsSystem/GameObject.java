@@ -31,12 +31,12 @@ public abstract class GameObject {
         return new BoundingRect(coords, dimension, jframe);
     }
 
-    public void setInitialTilePosition(int row, int col) {
-        this.initialTilePosition = new Point(col, row);
+    public void setInitialTilePoint(int row, int col) {
+        this.initialTilePoint = new MapPoint(row, col);
     }
 
-    public Point getInitialTilePosition() {
-        return this.initialTilePosition;
+    public MapPoint getInitialTilePoint() {
+        return this.initialTilePoint;
     }
 
     public void setInitialCoords(IsometricCoords initialCoords) {
@@ -78,5 +78,5 @@ public abstract class GameObject {
 
     private Game game;
     private IsometricCoords initialCoords;
-    private Point initialTilePosition = new Point(0, 0);
+    private MapPoint initialTilePoint = new MapPoint(0, 0);
 }

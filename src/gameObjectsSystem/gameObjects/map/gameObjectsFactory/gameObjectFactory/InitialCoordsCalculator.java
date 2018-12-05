@@ -1,6 +1,7 @@
 package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import gameObjectsSystem.GameObject;
+import gameObjectsSystem.MapPoint;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;
@@ -13,10 +14,10 @@ class InitialCoordsCalculator {
     }
 
     private InitialCoordsCalculator(GameObject gameObject, GameObject prevGameObject) {
-        Point initialTilePosition = gameObject.getInitialTilePosition();
+        MapPoint initialTilePoint = gameObject.getInitialTilePoint();
 
-        this.row = initialTilePosition.y;
-        this.col = initialTilePosition.x;
+        this.row = initialTilePoint.getRow();
+        this.col = initialTilePoint.getCol();
 
         this.gameObject = gameObject;
         this.prevGameObject = prevGameObject;

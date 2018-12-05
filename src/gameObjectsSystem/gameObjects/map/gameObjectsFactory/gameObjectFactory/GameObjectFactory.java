@@ -24,7 +24,7 @@ public class GameObjectFactory {
     private GameObject create() throws Exception {
         GameObject gameObject = this.createBase();
 
-        gameObject.setInitialTilePosition(this.row, this.col);
+        gameObject.setInitialTilePoint(this.row, this.col);
 
         IsometricCoords initialCoords = this.calcInitialCoords(gameObject);
 
