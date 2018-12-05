@@ -2,6 +2,7 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import game.Game;
 import gameObjectsSystem.GameObject;
+import gameObjectsSystem.MapPoint;
 import lib.coords.IsometricCoords;
 
 import java.lang.reflect.Constructor;
@@ -14,17 +15,16 @@ public class GameObjectFactory {
     }
 
     private GameObjectFactory(GameObjectData data) {
-        this.row = data.row;
-        this.col = data.col;
         this.name = data.name;
         this.game = data.game;
+        this.mapPoint = data.mapPoint;
         this.prevGameObject = data.prevGameObject;
     }
 
     private GameObject create() throws Exception {
         GameObject gameObject = this.createBase();
 
-        gameObject.setInitialTilePoint(this.row, this.col);
+        gameObject.setInitialMapPoint(this.mapPoint);
 
         IsometricCoords initialCoords = this.calcInitialCoords(gameObject);
 
@@ -48,10 +48,8 @@ public class GameObjectFactory {
         return InitialCoordsCalculator.calc(gameObject, this.prevGameObject);
     }
 
-    private int row;
-    private int col;
-
     private Game game;
     private String name;
+    private MapPoint mapPoint;
     private GameObject prevGameObject;
 }

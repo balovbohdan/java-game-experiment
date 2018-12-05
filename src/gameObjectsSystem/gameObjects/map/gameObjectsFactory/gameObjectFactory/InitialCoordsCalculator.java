@@ -14,14 +14,9 @@ class InitialCoordsCalculator {
     }
 
     private InitialCoordsCalculator(GameObject gameObject, GameObject prevGameObject) {
-        MapPoint initialTilePoint = gameObject.getInitialTilePoint();
-
-        this.row = initialTilePoint.getRow();
-        this.col = initialTilePoint.getCol();
-
         this.gameObject = gameObject;
         this.prevGameObject = prevGameObject;
-
+        this.initialMapPoint = gameObject.getInitialMapPoint();
         this.extraXOffset = this.calcExtraXOffset();
     }
 
@@ -46,8 +41,11 @@ class InitialCoordsCalculator {
         int width = (int) gameObjectDimension.getWidth();
         int height = (int) gameObjectDimension.getHeight();
 
-        int x = (int) Math.round((width + xOffset) * this.col + this.extraXOffset);
-        int y = (int) Math.round((height + yOffset) * this.row);
+        int row = this.getRow();
+        int col = this.getCol();
+
+        int x = (int) Math.round((width + xOffset) * col + this.extraXOffset);
+        int y = (int) Math.round((height + yOffset) * row);
 
         return new IsometricCoords(x, y);
     }
@@ -61,16 +59,24 @@ class InitialCoordsCalculator {
 
         int width = (int) gameObjectDimension.getWidth();
 
-        return this.row % 2 == 0
+        int row = this.getRow();
+
+        return row % 2 == 0
             ? -width / 2
             : 0;
     }
 
-    private int row;
-    private int col;
+    private int getRow() {
+        return this.initialMapPoint.getRow();
+    }
+
+    private int getCol() {
+        return this.initialMapPoint.getCol();
+    }
 
     private int extraXOffset;
 
     private GameObject gameObject;
+    private MapPoint initialMapPoint;
     private GameObject prevGameObject;
 }

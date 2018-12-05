@@ -1,5 +1,6 @@
 package lib.map.configParser;
 
+import gameObjectsSystem.MapPoint;
 import lib.map.ConfigItem;
 import lib.map.ConfigItems;
 
@@ -52,7 +53,9 @@ class RowsDataParser {
     }
 
     private static ConfigItem createConfigItem(int row, int col, String name) {
-        return new ConfigItem(row, col, name);
+        MapPoint mapPoint = new MapPoint(row, col);
+
+        return new ConfigItem(mapPoint, name);
     }
 
     private static ConfigItems createConfigItems() {

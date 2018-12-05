@@ -1,26 +1,21 @@
 package lib.map;
 
+import gameObjectsSystem.MapPoint;
+
 public class ConfigItem {
-    public ConfigItem(int row, int col, String name) {
-        this.row = row;
-        this.col = col;
+    public ConfigItem(MapPoint mapPoint, String name) {
+        this.mapPoint = mapPoint;
         this.name = name;
     }
 
-    public int getCol() {
-        return this.col;
-    }
-
-    public int getRow() {
-        return this.row;
+    public MapPoint getMapPoint() {
+        return this.mapPoint;
     }
 
     public String getName() {
         return this.name;
     }
 
-    private int row;
-    private int col;
-
     private String name;
+    private MapPoint mapPoint;
 }

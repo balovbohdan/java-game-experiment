@@ -31,11 +31,11 @@ public abstract class GameObject {
         return new BoundingRect(coords, dimension, jframe);
     }
 
-    public void setInitialTilePoint(int row, int col) {
-        this.initialTilePoint = new MapPoint(row, col);
+    public void setInitialMapPoint(MapPoint mapPoint) {
+        this.initialTilePoint = mapPoint;
     }
 
-    public MapPoint getInitialTilePoint() {
+    public MapPoint getInitialMapPoint() {
         return this.initialTilePoint;
     }
 

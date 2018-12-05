@@ -2,10 +2,10 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import game.Game;
 import gameObjectsSystem.GameObject;
+import gameObjectsSystem.MapPoint;
 
 public class GameObjectData {
-    public int row = 0;
-    public int col = 0;
+    public MapPoint mapPoint;
     public String name;
     public Game game;
     public GameObject prevGameObject;

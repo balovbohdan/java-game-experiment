@@ -61,8 +61,7 @@ public class GameObjectsFactory {
     private GameObjectData createGameObjectData(ConfigItem configItem) {
         GameObjectData data = new GameObjectData();
 
-        data.row = configItem.getRow();
-        data.col = configItem.getCol();
+        data.mapPoint = configItem.getMapPoint();
         data.name = configItem.getName();
 
         data.game = this.game;
