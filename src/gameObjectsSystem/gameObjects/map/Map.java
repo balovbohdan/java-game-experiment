@@ -4,6 +4,7 @@ import game.Game;
 import game.window.Window;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.GameObjects;
+import gameObjectsSystem.gameObjects.map.gameObjectsFactory.GameObjectsFactory;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;

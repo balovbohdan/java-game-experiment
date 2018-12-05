@@ -20,7 +20,7 @@ public abstract class GameObject {
 
     public GameObject(Game game, IsometricCoords initialCoords) {
         this.game = game;
-        this.initialCoords = this.createInitialCoords(initialCoords);
+        this.initialCoords = this.prepareInitialCoords(initialCoords);
     }
 
     public BoundingRect getBoundingRect() {
@@ -29,6 +29,18 @@ public abstract class GameObject {
         JFrame jframe = (JFrame) this.getWindow();
 
         return new BoundingRect(coords, dimension, jframe);
+    }
+
+    public void setInitialTilePosition(int row, int col) {
+        this.initialTilePosition = new Point(col, row);
+    }
+
+    public Point getInitialTilePosition() {
+        return this.initialTilePosition;
+    }
+
+    public void setInitialCoords(IsometricCoords initialCoords) {
+        this.initialCoords = this.prepareInitialCoords(initialCoords);
     }
 
     public Point getChainingOffsets() {
@@ -43,7 +55,7 @@ public abstract class GameObject {
         return this.initialCoords;
     }
 
-    private IsometricCoords createInitialCoords(IsometricCoords initialCoords) {
+    private IsometricCoords prepareInitialCoords(IsometricCoords initialCoords) {
         Point offsets = this.getChainingOffsets();
 
         initialCoords.addOffsets(offsets);
@@ -66,4 +78,5 @@ public abstract class GameObject {
 
     private Game game;
     private IsometricCoords initialCoords;
+    private Point initialTilePosition = new Point(0, 0);
 }
