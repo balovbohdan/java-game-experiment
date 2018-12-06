@@ -1,24 +1,24 @@
-package gameObjectsSystem.gameObjects.grass;
+package gameObjectsSystem.gameObjects.floor;
 
 import game.Game;
 import gameObjectsSystem.GameObject;
-import gameObjectsSystem.gameObjects.grass.spriteSheet.SpriteSheet;
+import gameObjectsSystem.gameObjects.floor.spriteSheet.SpriteSheet;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;
 import java.io.IOException;
 
-public class Grass extends GameObject {
-    public Grass(Game game) {
+public class Floor extends GameObject {
+    public Floor(Game game) {
         super(game);
 
-        this.spriteSheet = Grass.createSpriteSheet(this);
+        this.spriteSheet = Floor.createSpriteSheet(this);
     }
 
-    public Grass(Game game, IsometricCoords initialCoords) {
+    public Floor(Game game, IsometricCoords initialCoords) {
         super(game, initialCoords);
 
-        this.spriteSheet = Grass.createSpriteSheet(this);
+        this.spriteSheet = Floor.createSpriteSheet(this);
     }
 
     public IsometricCoords getCoords() {
@@ -37,7 +37,7 @@ public class Grass extends GameObject {
         int x = this.getX();
         int y = this.getY();
 
-        graphics.drawImage(image, x, y, null);
+        graphics.drawImage(image,x, y, null);
     }
 
     public Point getChainingOffsets() {
@@ -56,9 +56,9 @@ public class Grass extends GameObject {
         return coords.getY();
     }
 
-    private static SpriteSheet createSpriteSheet(Grass grass) {
+    private static SpriteSheet createSpriteSheet(Floor floor) {
         try {
-            return new SpriteSheet(grass);
+            return new SpriteSheet(floor);
         } catch (IOException e) {
             System.out.println(e.getMessage());
 

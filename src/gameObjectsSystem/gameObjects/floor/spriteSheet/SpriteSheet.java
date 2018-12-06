@@ -1,33 +1,33 @@
-package gameObjectsSystem.gameObjects.grass.spriteSheet;
+package gameObjectsSystem.gameObjects.floor.spriteSheet;
 
-import gameObjectsSystem.gameObjects.grass.Grass;
+import gameObjectsSystem.gameObjects.floor.Floor;
 import lib.spriteSheetManager.SpriteSheetManager;
 
 import java.awt.*;
 import java.io.IOException;
 
 public class SpriteSheet {
-    public SpriteSheet(Grass grass) throws IOException {
-        this.manager = SpriteSheet.createManager(grass);
+    public SpriteSheet(Floor floor) throws IOException {
+        this.manager = SpriteSheet.createManager(floor);
     }
 
     public Image getItem() {
         return this.manager.getItem(0);
     }
 
-    private static SpriteSheetManager createManager(Grass grass) throws IOException {
+    private static SpriteSheetManager createManager(Floor floor) throws IOException {
         String src = SpriteSheet.getSrc();
-        Params params = SpriteSheet.createParams(grass);
+        Params params = SpriteSheet.createParams(floor);
 
         return new SpriteSheetManager(src, params);
     }
 
     private static String getSrc() {
-        return "assets/images/sprite-sheets/grass/grass.png";
+        return "assets/images/sprite-sheets/floors/floor.png";
     }
 
-    private static Params createParams(Grass grass) {
-        Dimension dimension = grass.getDimension();
+    private static Params createParams(Floor floor) {
+        Dimension dimension = floor.getDimension();
 
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
