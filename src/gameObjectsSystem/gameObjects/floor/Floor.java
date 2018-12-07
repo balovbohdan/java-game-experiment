@@ -37,7 +37,7 @@ public class Floor extends GameObject {
         int x = this.getX();
         int y = this.getY();
 
-        graphics.drawImage(image,x, y, null);
+        graphics.drawImage(image, x, y, null);
     }
 
     public Point getChainingOffsets() {
