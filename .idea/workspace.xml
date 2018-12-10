@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea7fc0f-cea0-4079-9dc0-48994921a0d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/sprite-sheets/cubes/cube.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/configs/maps/def.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/configs/maps/def.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/sprite-sheets/cubes/cube.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/sprite-sheets/cubes/cube.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/sprite-sheets/floors/floor.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/sprite-sheets/floors/floor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/GameObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/GameObjects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/Cube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/Params.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/Params.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/SpriteSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/SpriteSheet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/Grass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/GameObjectsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/GameObjectsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/InitialCoordsCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/InitialCoordsCalculator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/game$Main.ic" NAME="Main Coverage Results" MODIFIED="1543439621375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/game$Main.ic" NAME="Main Coverage Results" MODIFIED="1544217384270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="201" />
@@ -27,127 +32,111 @@
     <session id="-76279556">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
-          <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="5" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="iml" value="1" />
-          <entry key="java" value="251" />
+          <entry key="java" value="287" />
           <entry key="json" value="1" />
-          <entry key="map" value="11" />
-          <entry key="png" value="14" />
+          <entry key="map" value="16" />
+          <entry key="png" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="14" />
-          <entry key="JAVA" value="251" />
+          <entry key="Image" value="26" />
+          <entry key="JAVA" value="287" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="PLAIN_TEXT" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="46" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="44950" />
+          <entry key="java" value="48492" />
           <entry key="json" value="33" />
-          <entry key="map" value="164" />
+          <entry key="map" value="261" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="44950" />
+          <entry key="JAVA" value="48492" />
           <entry key="JSON" value="33" />
-          <entry key="PLAIN_TEXT" value="213" />
+          <entry key="PLAIN_TEXT" value="310" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="265">
-                  <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/spriteSheet/SpriteSheet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="439">
-                  <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#712#713#0" expanded="true" />
-                    <element signature="e#781#782#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/SpriteSheet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#325#326#0" expanded="true" />
-                    <element signature="e#369#370#0" expanded="true" />
-                    <element signature="e#326#327#0" expanded="true" />
-                    <element signature="e#347#348#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/Cube.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="373">
-                  <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#610#611#0" expanded="true" />
-                    <element signature="e#655#656#0" expanded="true" />
-                    <element signature="e#718#719#0" expanded="true" />
-                    <element signature="e#755#756#0" expanded="true" />
-                    <element signature="e#1017#1018#0" expanded="true" />
-                    <element signature="e#1050#1051#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/GameObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="57" column="27" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
+                <element signature="e#1029#1030#0" expanded="true" />
+                <element signature="e#1456#1457#0" expanded="true" />
+                <element signature="e#1497#1498#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/GameObjectsFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/InitialCoordsCalculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -181,6 +170,12 @@
       <find>create</find>
       <find>row</find>
       <find>Grass</find>
+      <find>topSinling</find>
+      <find>chaini</find>
+      <find>chaibi</find>
+      <find>getChainingOffsets</find>
+      <find>isome</find>
+      <find>get</find>
     </findStrings>
     <replaceStrings>
       <replace>Window</replace>
@@ -196,6 +191,7 @@
       <replace>col</replace>
       <replace>parse</replace>
       <replace>Floor</replace>
+      <replace>topSibling</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/gameObjectsSystem</dir>
@@ -217,15 +213,12 @@
         <option value="$PROJECT_DIR$/src/lib/coords/IsometricCoords.java" />
         <option value="$PROJECT_DIR$/src/lib/boundingRest/BoundingRect.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/BoundingRect.java" />
-        <option value="$PROJECT_DIR$/src/lib/BoundingRect.java" />
         <option value="$PROJECT_DIR$/src/lib/spriteSheetManager/SpriteSheetManager.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/CoordsManager.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/GameObjectsFactory.java" />
         <option value="$PROJECT_DIR$/src/lib/coords/Coords.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/spriteSheet/Params.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/spriteSheet/Params.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/spriteSheet/SpriteSheet.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/Player.java" />
         <option value="$PROJECT_DIR$/src/configs/Config.java" />
         <option value="$PROJECT_DIR$/src/lib/map/ConfigItemsFactory.java" />
         <option value="$PROJECT_DIR$/src/lib/map/RowsDataParser.java" />
@@ -235,7 +228,6 @@
         <option value="$PROJECT_DIR$/src/lib/map/configParser/ConfigParser.java" />
         <option value="$PROJECT_DIR$/src/lib/map/ConfigItems.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/Map.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/GameObjects.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/GameObjectsFactory.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/TileDimension.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/InitialCoordsCalculator.java" />
@@ -245,20 +237,24 @@
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/MapDot.java" />
         <option value="$PROJECT_DIR$/src/lib/map/configParser/RowsDataParser.java" />
         <option value="$PROJECT_DIR$/src/lib/map/ConfigItem.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/GameObjectsFactory.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectData.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectFactory.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/InitialCoordsCalculator.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/spriteSheet/SpriteSheet.java" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/Grass.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/spriteSheet/Params.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/spriteSheet/SpriteSheet.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/Params.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/SpriteSheet.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectData.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/GameObjects.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/GameObjectsFactory.java" />
         <option value="$PROJECT_DIR$/assets/configs/maps/def.map" />
-        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/InitialCoordsCalculator.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectFactory.java" />
+        <option value="$PROJECT_DIR$/src/lib/BoundingRect.java" />
         <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/Cube.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/CoordsManager.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/Grass.java" />
+        <option value="$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/Player.java" />
       </list>
     </option>
   </component>
@@ -272,6 +268,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,6 +284,35 @@
             <path>
               <item name="game" type="b2602c69:ProjectViewProjectNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="sprite-sheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="sprite-sheets" type="462c0819:PsiDirectoryNode" />
+              <item name="cubes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="sprite-sheets" type="462c0819:PsiDirectoryNode" />
+              <item name="floors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -308,7 +334,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gameObjectsSystem" type="462c0819:PsiDirectoryNode" />
               <item name="gameObjects" type="462c0819:PsiDirectoryNode" />
-              <item name="cube" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="game" type="b2602c69:ProjectViewProjectNode" />
@@ -316,19 +342,28 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gameObjectsSystem" type="462c0819:PsiDirectoryNode" />
               <item name="gameObjects" type="462c0819:PsiDirectoryNode" />
-              <item name="cube" type="462c0819:PsiDirectoryNode" />
-              <item name="spriteSheet" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
+              <item name="gameObjectsFactory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gameObjectsSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="gameObjects" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
+              <item name="gameObjectsFactory" type="462c0819:PsiDirectoryNode" />
+              <item name="gameObjectFactory" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544202246746" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544460935653" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -399,7 +434,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.16987951" visible="true" weight="0.22031474" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.16987951" visible="true" weight="0.16523606" />
       <window_info id="Structure" order="1" sideWeight="0.8301205" side_tool="true" weight="0.27539343" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -408,7 +443,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19759037" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.12650603" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.18674698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -463,14 +498,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/configs/maps/map.json" />
-    <entry file="file://$PROJECT_DIR$/src/game/window/Renderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -512,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/BoundingRect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -533,9 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/sprite-sheets/grass/grass.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/coords/Coords.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -549,13 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/CoordsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -579,36 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/GameObjectsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/GameObjects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -627,13 +607,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/TileDimension.java" />
-    <entry file="file://$PROJECT_DIR$/src/lib/spriteSheetManager/SpriteSheetManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/spriteSheetManager/Params.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -641,64 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/MapPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/map/ConfigItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/GameObjectsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/InitialCoordsCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -728,38 +647,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/Grass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/spriteSheet/Params.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/Params.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/SpriteSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding>
-            <element signature="e#145#146#0" expanded="true" />
-            <element signature="e#198#199#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/images/sprite-sheets/cubes/cube.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/sprite-sheets/floors/tile.png" />
+    <entry file="file://$PROJECT_DIR$/assets/images/sprite-sheets/floors/floor.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/sprite-sheets/grass/floor.png" />
     <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/spriteSheet/SpriteSheet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#712#713#0" expanded="true" />
@@ -768,60 +698,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/Params.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding>
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/configs/maps/def.map">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/spriteSheet/SpriteSheet.java">
+    <entry file="file://$PROJECT_DIR$/src/lib/spriteSheetManager/SpriteSheetManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="244">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java">
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/GameObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/GameObjectsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/BoundingRect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/cube/Cube.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+        <state relative-caret-position="615">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/GameObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/MapPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/floor/Floor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/CoordsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/grass/Grass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1497#1498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/GameObjectsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameObjectsSystem/gameObjects/map/gameObjectsFactory/gameObjectFactory/InitialCoordsCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

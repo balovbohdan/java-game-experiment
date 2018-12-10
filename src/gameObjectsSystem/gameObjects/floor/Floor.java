@@ -26,7 +26,7 @@ public class Floor extends GameObject {
     }
 
     public Dimension getDimension() {
-        return new Dimension(256, 150);
+        return new Dimension(128, 64);
     }
 
     public void update() {}
@@ -41,7 +41,7 @@ public class Floor extends GameObject {
     }
 
     public Point getChainingOffsets() {
-        return new Point(0, -76);
+        return new Point(-42, 0);
     }
 
     private int getX() {

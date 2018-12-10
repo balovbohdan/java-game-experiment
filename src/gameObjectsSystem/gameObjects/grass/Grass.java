@@ -41,7 +41,7 @@ public class Grass extends GameObject {
     }
 
     public Point getChainingOffsets() {
-        return new Point(0, -76);
+        return new Point(0, 0);
     }
 
     private int getX() {

@@ -4,6 +4,7 @@ import configs.Config;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.GameObjects;
+import gameObjectsSystem.MapPoint;
 import gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory.GameObjectData;
 import gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory.GameObjectFactory;
 import lib.map.ConfigItem;
@@ -59,19 +60,19 @@ public class GameObjectsFactory {
     }
 
     private GameObjectData createGameObjectData(ConfigItem configItem) {
+        MapPoint mapPoint = configItem.getMapPoint();
+
         GameObjectData data = new GameObjectData();
 
-        data.mapPoint = configItem.getMapPoint();
         data.name = configItem.getName();
+        data.mapPoint = configItem.getMapPoint();
 
         data.game = this.game;
-        data.prevGameObject = this.getPrevGameObject();
+
+        data.topSibling = this.gameObjects.getTopSibling(mapPoint);
+        data.leftSibling = this.gameObjects.getLeftSibling(mapPoint);
 
         return data;
-    }
-
-    private GameObject getPrevGameObject() {
-        return this.gameObjects.getLast();
     }
 
     private Game game;

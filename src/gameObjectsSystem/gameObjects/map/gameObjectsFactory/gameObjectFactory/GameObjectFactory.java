@@ -18,7 +18,8 @@ public class GameObjectFactory {
         this.name = data.name;
         this.game = data.game;
         this.mapPoint = data.mapPoint;
-        this.prevGameObject = data.prevGameObject;
+        this.topSibling = data.topSibling;
+        this.leftSibling = data.leftSibling;
     }
 
     private GameObject create() throws Exception {
@@ -45,11 +46,13 @@ public class GameObjectFactory {
     }
 
     private IsometricCoords calcInitialCoords(GameObject gameObject) {
-        return InitialCoordsCalculator.calc(gameObject, this.prevGameObject);
+        return InitialCoordsCalculator.calc(gameObject, this.leftSibling, this.topSibling);
     }
 
     private Game game;
     private String name;
     private MapPoint mapPoint;
-    private GameObject prevGameObject;
+
+    private GameObject topSibling;
+    private GameObject leftSibling;
 }

@@ -1,82 +1,78 @@
 package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import gameObjectsSystem.GameObject;
-import gameObjectsSystem.MapPoint;
+import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;
 
 class InitialCoordsCalculator {
-    static IsometricCoords calc(GameObject gameObject, GameObject prevGameObject) {
-        InitialCoordsCalculator calculator = new InitialCoordsCalculator(gameObject, prevGameObject);
+    static IsometricCoords calc(GameObject gameObject, GameObject leftSibling, GameObject topSibling) {
+        InitialCoordsCalculator calculator = new InitialCoordsCalculator(gameObject, leftSibling, topSibling);
 
         return calculator.calc();
     }
 
-    private InitialCoordsCalculator(GameObject gameObject, GameObject prevGameObject) {
+    private InitialCoordsCalculator(GameObject gameObject, GameObject leftSibling, GameObject topSobling) {
         this.gameObject = gameObject;
-        this.prevGameObject = prevGameObject;
-        this.initialMapPoint = gameObject.getInitialMapPoint();
-        this.extraXOffset = this.calcExtraXOffset();
+        this.leftSibling = leftSibling;
+        this.topSibling = topSobling;
     }
 
     private IsometricCoords calc() {
-        return this.prevGameObject == null
-            ? this.calcIfFirstGameObject()
-            : this.calcIfNotFirstGameObject();
+        CartesianCoords coords = this.calcCoordsWithOffsets();
+
+        return coords.toIsometric();
     }
 
-    private IsometricCoords calcIfFirstGameObject() {
-        return new IsometricCoords(this.extraXOffset, 0);
-    }
+    private CartesianCoords calcCoordsWithOffsets() {
+        double x = this.calcX();
+        double y = this.calcY();
 
-    private IsometricCoords calcIfNotFirstGameObject() {
         Point chainingOffsets = this.gameObject.getChainingOffsets();
 
         double xOffset = chainingOffsets.getX();
         double yOffset = chainingOffsets.getY();
 
-        Dimension gameObjectDimension = this.gameObject.getDimension();
+        int xWithOffset = (int) Math.round(x + xOffset);
+        int yWithOffset = (int) Math.round(y + yOffset);
 
-        int width = (int) gameObjectDimension.getWidth();
-        int height = (int) gameObjectDimension.getHeight();
-
-        int row = this.getRow();
-        int col = this.getCol();
-
-        int x = (int) Math.round((width + xOffset) * col + this.extraXOffset);
-        int y = (int) Math.round((height + yOffset) * row);
-
-        return new IsometricCoords(x, y);
+        return new CartesianCoords(xWithOffset, yWithOffset);
     }
 
-    /**
-     * Extra 'X' offset is needed to 'close'
-     * empty space between isometric tiles.
-     */
-    private int calcExtraXOffset() {
-        Dimension gameObjectDimension = this.gameObject.getDimension();
+    private double calcX() {
+        if (this.leftSibling == null)
+            return 0;
 
-        int width = (int) gameObjectDimension.getWidth();
+        Dimension dimension = this.leftSibling.getDimension();
 
-        int row = this.getRow();
+        int x = this.leftSibling
+            .getCoords()
+            .toCartesian()
+            .getX();
 
-        return row % 2 == 0
-            ? -width / 2
-            : 0;
+        double width = dimension.getWidth();
+
+        return width + x;
     }
 
-    private int getRow() {
-        return this.initialMapPoint.getRow();
-    }
+    private double calcY() {
+        if (this.topSibling == null)
+            return 0;
 
-    private int getCol() {
-        return this.initialMapPoint.getCol();
-    }
+        Dimension dimension = this.topSibling.getDimension();
 
-    private int extraXOffset;
+        int y = this.topSibling
+            .getCoords()
+            .toCartesian()
+            .getY();
+
+        double height = dimension.getHeight();
+
+        return height + y;
+    }
 
     private GameObject gameObject;
-    private MapPoint initialMapPoint;
-    private GameObject prevGameObject;
+    private GameObject leftSibling;
+    private GameObject topSibling;
 }

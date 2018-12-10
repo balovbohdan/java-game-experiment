@@ -26,7 +26,7 @@ public class Cube extends GameObject {
     }
 
     public Dimension getDimension() {
-        return new Dimension(256,299);
+        return new Dimension(128,128);
     }
 
     public void update() {}
@@ -41,7 +41,7 @@ public class Cube extends GameObject {
     }
 
     public Point getChainingOffsets() {
-        return new Point(0, -150);
+        return new Point(-42, -10);
     }
 
     private int getX() {
