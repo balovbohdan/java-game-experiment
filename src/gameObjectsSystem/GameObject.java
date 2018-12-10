@@ -2,6 +2,7 @@ package gameObjectsSystem;
 
 import game.Game;
 import lib.BoundingRect;
+import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
 import javax.swing.*;
@@ -18,7 +19,7 @@ public abstract class GameObject {
         this.initialCoords = this.createInitialCoords();
     }
 
-    public GameObject(Game game, IsometricCoords initialCoords) {
+    public GameObject(Game game, CartesianCoords initialCoords) {
         this.game = game;
         this.initialCoords = this.prepareInitialCoords(initialCoords);
     }
@@ -39,7 +40,7 @@ public abstract class GameObject {
         return this.initialTilePoint;
     }
 
-    public void setInitialCoords(IsometricCoords initialCoords) {
+    public void setInitialCoords(CartesianCoords initialCoords) {
         this.initialCoords = this.prepareInitialCoords(initialCoords);
     }
 
@@ -55,12 +56,12 @@ public abstract class GameObject {
         return this.initialCoords;
     }
 
-    private IsometricCoords prepareInitialCoords(IsometricCoords initialCoords) {
+    private IsometricCoords prepareInitialCoords(CartesianCoords initialCoords) {
         Point offsets = this.getChainingOffsets();
 
         initialCoords.addOffsets(offsets);
 
-        return initialCoords;
+        return initialCoords.toIsometric();
     }
 
     private IsometricCoords createInitialCoords() {

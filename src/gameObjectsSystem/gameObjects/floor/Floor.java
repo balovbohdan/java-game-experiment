@@ -3,6 +3,7 @@ package gameObjectsSystem.gameObjects.floor;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.floor.spriteSheet.SpriteSheet;
+import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;
@@ -15,7 +16,7 @@ public class Floor extends GameObject {
         this.spriteSheet = Floor.createSpriteSheet(this);
     }
 
-    public Floor(Game game, IsometricCoords initialCoords) {
+    public Floor(Game game, CartesianCoords initialCoords) {
         super(game, initialCoords);
 
         this.spriteSheet = Floor.createSpriteSheet(this);
@@ -41,7 +42,7 @@ public class Floor extends GameObject {
     }
 
     public Point getChainingOffsets() {
-        return new Point(-42, 0);
+        return new Point(-32, 0);
     }
 
     private int getX() {

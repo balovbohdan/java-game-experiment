@@ -3,6 +3,7 @@ package gameObjectsSystem.gameObjects.player;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
+import lib.coords.CartesianCoords;
 import lib.coords.Coords;
 import lib.coords.IsometricCoords;
 import lib.eventsManagers.keyboard.KeyboardMap;
@@ -19,7 +20,7 @@ public class Player extends GameObject {
         this.coordsManager = Player.createCoordsManager(this);
     }
 
-    public Player(Game game, IsometricCoords initialCoords) {
+    public Player(Game game, CartesianCoords initialCoords) {
         super(game, initialCoords);
 
         this.keyboardMap = game.getKeyboardMap();

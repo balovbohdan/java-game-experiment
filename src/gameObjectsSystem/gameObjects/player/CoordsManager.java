@@ -12,10 +12,10 @@ class CoordsManager {
         this.coords = new CartesianCoords(0, 0);
     }
 
-    CoordsManager(Player player, IsometricCoords initialCoords){
+    CoordsManager(Player player, CartesianCoords initialCoords){
         this.player = player;
         this.keyboardMap = player.getKeyboardMap();
-        this.coords = initialCoords.toCartesian();
+        this.coords = initialCoords;
     }
 
     IsometricCoords getCoords() {

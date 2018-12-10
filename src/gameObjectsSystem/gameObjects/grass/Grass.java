@@ -3,6 +3,7 @@ package gameObjectsSystem.gameObjects.grass;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.grass.spriteSheet.SpriteSheet;
+import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;
@@ -15,7 +16,7 @@ public class Grass extends GameObject {
         this.spriteSheet = Grass.createSpriteSheet(this);
     }
 
-    public Grass(Game game, IsometricCoords initialCoords) {
+    public Grass(Game game, CartesianCoords initialCoords) {
         super(game, initialCoords);
 
         this.spriteSheet = Grass.createSpriteSheet(this);

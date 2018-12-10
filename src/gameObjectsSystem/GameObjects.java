@@ -4,8 +4,8 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class GameObjects {
-    public static final int ROWS_QTY = 10;
-    public static final int COLS_QTY = 7;
+    public static final int ROWS_QTY = 2;
+    public static final int COLS_QTY = 20;
 
     public void add(GameObject gameObject) {
         this.gameObjects.add(gameObject);

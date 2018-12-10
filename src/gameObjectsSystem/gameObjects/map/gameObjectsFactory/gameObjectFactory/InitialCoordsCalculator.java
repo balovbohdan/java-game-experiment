@@ -2,12 +2,11 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import gameObjectsSystem.GameObject;
 import lib.coords.CartesianCoords;
-import lib.coords.IsometricCoords;
 
 import java.awt.*;
 
 class InitialCoordsCalculator {
-    static IsometricCoords calc(GameObject gameObject, GameObject leftSibling, GameObject topSibling) {
+    static CartesianCoords calc(GameObject gameObject, GameObject leftSibling, GameObject topSibling) {
         InitialCoordsCalculator calculator = new InitialCoordsCalculator(gameObject, leftSibling, topSibling);
 
         return calculator.calc();
@@ -19,10 +18,8 @@ class InitialCoordsCalculator {
         this.topSibling = topSobling;
     }
 
-    private IsometricCoords calc() {
-        CartesianCoords coords = this.calcCoordsWithOffsets();
-
-        return coords.toIsometric();
+    private CartesianCoords calc() {
+        return this.calcCoordsWithOffsets();
     }
 
     private CartesianCoords calcCoordsWithOffsets() {

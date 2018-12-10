@@ -3,6 +3,7 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.MapPoint;
+import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
 import java.lang.reflect.Constructor;
@@ -27,7 +28,7 @@ public class GameObjectFactory {
 
         gameObject.setInitialMapPoint(this.mapPoint);
 
-        IsometricCoords initialCoords = this.calcInitialCoords(gameObject);
+        CartesianCoords initialCoords = this.calcInitialCoords(gameObject);
 
         gameObject.setInitialCoords(initialCoords);
 
@@ -45,7 +46,7 @@ public class GameObjectFactory {
         return (GameObject) ob;
     }
 
-    private IsometricCoords calcInitialCoords(GameObject gameObject) {
+    private CartesianCoords calcInitialCoords(GameObject gameObject) {
         return InitialCoordsCalculator.calc(gameObject, this.leftSibling, this.topSibling);
     }
 
