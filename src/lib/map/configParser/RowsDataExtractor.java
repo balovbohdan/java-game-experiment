@@ -42,7 +42,7 @@ class RowsDataExtractor {
 
         return content
             .toString()
-            .split("\\r?\\n\\r?\\n");
+            .split("\\r?\\n\\r?\\n\\r?\\n\\r?\\n");
     }
 
     private BufferedReader createBufferedReader() throws IOException {

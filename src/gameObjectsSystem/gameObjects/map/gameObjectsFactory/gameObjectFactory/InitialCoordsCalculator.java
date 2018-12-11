@@ -6,35 +6,40 @@ import lib.coords.CartesianCoords;
 import java.awt.*;
 
 class InitialCoordsCalculator {
-    static CartesianCoords calc(GameObject gameObject, GameObject leftSibling, GameObject topSibling) {
-        InitialCoordsCalculator calculator = new InitialCoordsCalculator(gameObject, leftSibling, topSibling);
+    static CartesianCoords calc(GameObject gameObject, Point offsets, GameObject leftSibling, GameObject topSibling) {
+        InitialCoordsCalculator calculator = new InitialCoordsCalculator(gameObject, offsets, leftSibling, topSibling);
 
         return calculator.calc();
     }
 
-    private InitialCoordsCalculator(GameObject gameObject, GameObject leftSibling, GameObject topSobling) {
+    private InitialCoordsCalculator(GameObject gameObject, Point offsets, GameObject leftSibling, GameObject topSobling) {
         this.gameObject = gameObject;
+        this.offsets = offsets;
         this.leftSibling = leftSibling;
         this.topSibling = topSobling;
     }
 
     private CartesianCoords calc() {
-        return this.calcCoordsWithOffsets();
+        CartesianCoords coords = this.calcCoords();
+
+        coords.addOffsets(this.offsets);
+
+        return this.addChainingOffsets(coords);
     }
 
-    private CartesianCoords calcCoordsWithOffsets() {
-        double x = this.calcX();
-        double y = this.calcY();
-
+    private CartesianCoords addChainingOffsets(CartesianCoords coords) {
         Point chainingOffsets = this.gameObject.getChainingOffsets();
 
-        double xOffset = chainingOffsets.getX();
-        double yOffset = chainingOffsets.getY();
+        coords.addOffsets(chainingOffsets);
 
-        int xWithOffset = (int) Math.round(x + xOffset);
-        int yWithOffset = (int) Math.round(y + yOffset);
+        return coords;
+    }
 
-        return new CartesianCoords(xWithOffset, yWithOffset);
+    private CartesianCoords calcCoords() {
+        int x = (int) this.calcX();
+        int y = (int) this.calcY();
+
+        return new CartesianCoords(x, y);
     }
 
     private double calcX() {
@@ -69,6 +74,7 @@ class InitialCoordsCalculator {
         return height + y;
     }
 
+    private Point offsets;
     private GameObject gameObject;
     private GameObject leftSibling;
     private GameObject topSibling;

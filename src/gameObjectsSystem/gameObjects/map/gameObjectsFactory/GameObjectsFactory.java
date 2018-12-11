@@ -65,6 +65,7 @@ public class GameObjectsFactory {
         GameObjectData data = new GameObjectData();
 
         data.name = configItem.getName();
+        data.offsets = configItem.getOffsets();
         data.mapPoint = configItem.getMapPoint();
 
         data.game = this.game;

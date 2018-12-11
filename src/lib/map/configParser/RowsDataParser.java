@@ -4,6 +4,10 @@ import gameObjectsSystem.MapPoint;
 import lib.map.ConfigItem;
 import lib.map.ConfigItems;
 
+import java.awt.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 class RowsDataParser {
     static ConfigItems parse(String[] rowsData) {
         RowsDataParser factory = new RowsDataParser(rowsData);
@@ -28,14 +32,53 @@ class RowsDataParser {
     private void parseItemsOfRow(int row) {
         String[] itemsOfRowData = this.getItemsOfRowData(row);
 
-        int colsQty = itemsOfRowData.length;
+        int col = 0;
 
-        for (int col = 0; col < colsQty; col++) {
-            String name = itemsOfRowData[col];
-            ConfigItem item = RowsDataParser.createConfigItem(row, col, name);
+        for (String configLine : itemsOfRowData) {
+            Boolean configLineRepresentsParams = RowsDataParser.isConfigLineRepresentsParams(configLine);
 
-            this.addToConfigItems(item);
+            if (configLineRepresentsParams) {
+                this.addParamsToLastConfigItems(configLine);
+            } else {
+                this.addToConfigItems(row, col, configLine);
+
+                ++col;
+            }
         }
+    }
+
+    private void addParamsToLastConfigItems(String configLine) {
+        Point offsets = this.extractGameObjectOffsets(configLine);
+
+        this.updateLastConfigItem(offsets);
+    }
+
+    private Point extractGameObjectOffsets(String configLine) {
+        Pattern pattern = Pattern.compile("(?i)^ {4}- \\w+: (.+)");
+        Matcher matcher = pattern.matcher(configLine);
+
+        boolean resultExists = matcher.find();
+
+        if (!resultExists)
+            return null;
+
+        String result = matcher.group(1);
+
+        int xOffset = Integer.parseInt(result);
+
+        return new Point(xOffset, 0);
+    }
+
+    private void addToConfigItems(int row, int col, String configLine) {
+        ConfigItem item = RowsDataParser.createConfigItem(row, col, configLine);
+
+        this.configItems.add(item);
+    }
+
+    private void updateLastConfigItem(Point offsets) {
+        ConfigItem lastConfigItem = this.configItems.getLast();
+
+        lastConfigItem.setOffsets(offsets);
     }
 
     private String[] getItemsOfRowData(int row) {
@@ -48,8 +91,8 @@ class RowsDataParser {
         return this.rowsData[row];
     }
 
-    private void addToConfigItems(ConfigItem item) {
-        this.configItems.add(item);
+    private static Boolean isConfigLineRepresentsParams(String configLine) {
+        return configLine.matches("(?i)^ {4}- \\w+: .+");
     }
 
     private static ConfigItem createConfigItem(int row, int col, String name) {

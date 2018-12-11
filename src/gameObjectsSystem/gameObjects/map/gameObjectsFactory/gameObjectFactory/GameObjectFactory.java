@@ -6,6 +6,7 @@ import gameObjectsSystem.MapPoint;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
+import java.awt.*;
 import java.lang.reflect.Constructor;
 
 public class GameObjectFactory {
@@ -18,6 +19,7 @@ public class GameObjectFactory {
     private GameObjectFactory(GameObjectData data) {
         this.name = data.name;
         this.game = data.game;
+        this.offsets = data.offsets;
         this.mapPoint = data.mapPoint;
         this.topSibling = data.topSibling;
         this.leftSibling = data.leftSibling;
@@ -28,7 +30,7 @@ public class GameObjectFactory {
 
         gameObject.setInitialMapPoint(this.mapPoint);
 
-        CartesianCoords initialCoords = this.calcInitialCoords(gameObject);
+        CartesianCoords initialCoords = this.calcInitialCoords(gameObject, this.offsets);
 
         gameObject.setInitialCoords(initialCoords);
 
@@ -46,13 +48,14 @@ public class GameObjectFactory {
         return (GameObject) ob;
     }
 
-    private CartesianCoords calcInitialCoords(GameObject gameObject) {
-        return InitialCoordsCalculator.calc(gameObject, this.leftSibling, this.topSibling);
+    private CartesianCoords calcInitialCoords(GameObject gameObject, Point offsets) {
+        return InitialCoordsCalculator.calc(gameObject, offsets, this.leftSibling, this.topSibling);
     }
 
     private Game game;
     private String name;
     private MapPoint mapPoint;
+    private Point offsets;
 
     private GameObject topSibling;
     private GameObject leftSibling;
