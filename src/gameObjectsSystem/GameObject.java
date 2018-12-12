@@ -77,5 +77,4 @@ public abstract class GameObject {
 
     private Game game;
     private IsometricCoords initialCoords;
-    private MapPoint initialTilePoint = new MapPoint(0, 0);
 }
