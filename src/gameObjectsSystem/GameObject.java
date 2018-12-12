@@ -32,18 +32,16 @@ public abstract class GameObject {
         return new BoundingRect(coords, dimension, jframe);
     }
 
-    public void setInitialMapPoint(MapPoint mapPoint) {
-        this.initialTilePoint = mapPoint;
-    }
-
-    public MapPoint getInitialMapPoint() {
-        return this.initialTilePoint;
-    }
-
     public void setInitialCoords(CartesianCoords initialCoords) {
         this.initialCoords = this.prepareInitialCoords(initialCoords);
     }
 
+    /**
+     * Chaining offsets helps to find so called "chaining point".
+     * Chaining point is:
+     * 1) top-left tile corner at cartesian coordinates system;
+     * 2) top-center tile corner at isometric coordinates system.
+     */
     public Point getChainingOffsets() {
         return new Point(0, 0);
     }

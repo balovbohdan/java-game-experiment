@@ -28,8 +28,6 @@ public class GameObjectFactory {
     private GameObject create() throws Exception {
         GameObject gameObject = this.createBase();
 
-        gameObject.setInitialMapPoint(this.mapPoint);
-
         CartesianCoords initialCoords = this.calcInitialCoords(gameObject, this.offsets);
 
         gameObject.setInitialCoords(initialCoords);

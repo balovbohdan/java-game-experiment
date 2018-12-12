@@ -14,6 +14,29 @@ Floor
 Floor
 Floor
 Floor
+Floor
+Floor
+Floor
+Floor
+
+
+
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
+Floor
 Cube
     - xOffset: -64
 Floor
@@ -38,8 +61,10 @@ Floor
 Floor
 Floor
 Floor
+Cube
+    - xOffset: -64
+Cube
 Floor
-Floor
-Floor
+    - xOffset: 64
 Floor
 Floor
