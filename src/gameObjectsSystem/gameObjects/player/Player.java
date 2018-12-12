@@ -6,8 +6,8 @@ import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
 import lib.coords.CartesianCoords;
 import lib.coords.Coords;
 import lib.coords.IsometricCoords;
-import lib.dimensions.RealDimension;
-import lib.dimensions.VirtualDimension;
+import lib.gameObjectDimensions.RealDimension;
+import lib.gameObjectDimensions.VirtualDimension;
 import lib.eventsManagers.keyboard.KeyboardMap;
 
 import java.awt.*;

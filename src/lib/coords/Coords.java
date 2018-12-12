@@ -1,9 +1,9 @@
 package lib.coords;
 
-import java.awt.*;
+import lib.gameObjectPosition.offsets.RealOffsets;
 
 public class Coords {
-    public Coords(int x, int y) {
+    Coords(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -24,7 +24,7 @@ public class Coords {
         return this.y;
     }
 
-    public void addOffsets(Point offset) {
+    public void addOffsets(RealOffsets offset) {
         this.x += offset.getX();
         this.y += offset.getY();
     }

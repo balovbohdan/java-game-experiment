@@ -1,7 +1,7 @@
 package gameObjectsSystem.gameObjects.cube.spriteSheet;
 
 import gameObjectsSystem.gameObjects.cube.Cube;
-import lib.dimensions.RealDimension;
+import lib.gameObjectDimensions.RealDimension;
 import lib.spriteSheetManager.SpriteSheetManager;
 
 import java.awt.*;

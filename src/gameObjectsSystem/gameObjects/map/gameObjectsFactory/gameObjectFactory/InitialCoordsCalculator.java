@@ -2,18 +2,18 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import gameObjectsSystem.GameObject;
 import lib.coords.CartesianCoords;
-import lib.dimensions.RealDimension;
-
-import java.awt.*;
+import lib.gameObjectDimensions.RealDimension;
+import lib.gameObjectPosition.offsets.RealChainingOffsets;
+import lib.gameObjectPosition.offsets.RealOffsets;
 
 class InitialCoordsCalculator {
-    static CartesianCoords calc(GameObject gameObject, Point offsets, GameObject leftSibling, GameObject topSibling) {
+    static CartesianCoords calc(GameObject gameObject, RealOffsets offsets, GameObject leftSibling, GameObject topSibling) {
         InitialCoordsCalculator calculator = new InitialCoordsCalculator(gameObject, offsets, leftSibling, topSibling);
 
         return calculator.calc();
     }
 
-    private InitialCoordsCalculator(GameObject gameObject, Point offsets, GameObject leftSibling, GameObject topSobling) {
+    private InitialCoordsCalculator(GameObject gameObject, RealOffsets offsets, GameObject leftSibling, GameObject topSobling) {
         this.gameObject = gameObject;
         this.offsets = offsets;
         this.leftSibling = leftSibling;
@@ -29,7 +29,7 @@ class InitialCoordsCalculator {
     }
 
     private CartesianCoords addChainingOffsets(CartesianCoords coords) {
-        Point chainingOffsets = this.gameObject.getChainingOffsets();
+        RealChainingOffsets chainingOffsets = this.gameObject.getChainingOffsets();
 
         coords.addOffsets(chainingOffsets);
 
@@ -75,8 +75,9 @@ class InitialCoordsCalculator {
         return height + y;
     }
 
-    private Point offsets;
-    private GameObject gameObject;
     private GameObject leftSibling;
     private GameObject topSibling;
+
+    private GameObject gameObject;
+    private RealOffsets offsets;
 }

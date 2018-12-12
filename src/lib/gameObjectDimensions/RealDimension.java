@@ -1,4 +1,4 @@
-package lib.dimensions;
+package lib.gameObjectDimensions;
 
 /**
  * Real dimension represents sizes of game object's tile bounding rect.

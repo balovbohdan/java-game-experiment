@@ -1,7 +1,7 @@
 package lib;
 
 import lib.coords.IsometricCoords;
-import lib.dimensions.RealDimension;
+import lib.gameObjectDimensions.RealDimension;
 
 import javax.swing.*;
 

@@ -2,10 +2,11 @@ package gameObjectsSystem;
 
 import game.Game;
 import lib.BoundingRect;
-import lib.dimensions.RealDimension;
-import lib.dimensions.VirtualDimension;
+import lib.gameObjectDimensions.RealDimension;
+import lib.gameObjectDimensions.VirtualDimension;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
+import lib.gameObjectPosition.offsets.RealChainingOffsets;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,14 +37,8 @@ public abstract class GameObject {
         return new BoundingRect(coords, dimension, jframe);
     }
 
-    /**
-     * Chaining offsets helps to find so called "chaining point".
-     * Chaining point is:
-     * 1) top-left tile corner at cartesian coordinates system;
-     * 2) top-center tile corner at isometric coordinates system.
-     */
-    public Point getChainingOffsets() {
-        return new Point(0, 0);
+    public RealChainingOffsets getChainingOffsets() {
+        return new RealChainingOffsets(0, 0);
     }
 
     public void setInitialCoords(CartesianCoords initialCoords) {
@@ -59,7 +54,7 @@ public abstract class GameObject {
     }
 
     private IsometricCoords prepareInitialCoords(CartesianCoords initialCoords) {
-        Point offsets = this.getChainingOffsets();
+        RealChainingOffsets offsets = this.getChainingOffsets();
 
         initialCoords.addOffsets(offsets);
 
@@ -67,10 +62,10 @@ public abstract class GameObject {
     }
 
     private IsometricCoords createInitialCoords() {
-        Point offsets = this.getChainingOffsets();
+        RealChainingOffsets offsets = this.getChainingOffsets();
 
-        int x = (int) offsets.getX();
-        int y = (int) offsets.getY();
+        int x = offsets.getX();
+        int y = offsets.getY();
 
         return new IsometricCoords(x, y);
     }

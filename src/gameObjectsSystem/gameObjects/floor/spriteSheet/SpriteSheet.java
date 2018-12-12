@@ -1,7 +1,7 @@
 package gameObjectsSystem.gameObjects.floor.spriteSheet;
 
 import gameObjectsSystem.gameObjects.floor.Floor;
-import lib.dimensions.RealDimension;
+import lib.gameObjectDimensions.RealDimension;
 import lib.spriteSheetManager.SpriteSheetManager;
 
 import java.awt.*;

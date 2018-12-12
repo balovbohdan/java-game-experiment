@@ -3,8 +3,8 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import lib.coords.CartesianCoords;
+import lib.gameObjectPosition.offsets.RealOffsets;
 
-import java.awt.*;
 import java.lang.reflect.Constructor;
 
 public class GameObjectFactory {
@@ -43,13 +43,13 @@ public class GameObjectFactory {
         return (GameObject) ob;
     }
 
-    private CartesianCoords calcInitialCoords(GameObject gameObject, Point offsets) {
+    private CartesianCoords calcInitialCoords(GameObject gameObject, RealOffsets offsets) {
         return InitialCoordsCalculator.calc(gameObject, offsets, this.leftSibling, this.topSibling);
     }
 
     private Game game;
     private String name;
-    private Point offsets;
+    private RealOffsets offsets;
 
     private GameObject topSibling;
     private GameObject leftSibling;

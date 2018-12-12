@@ -3,8 +3,7 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.MapPoint;
-
-import java.awt.*;
+import lib.gameObjectPosition.offsets.RealOffsets;
 
 public class GameObjectData {
     public Game game;
@@ -12,5 +11,5 @@ public class GameObjectData {
     public MapPoint mapPoint;
     public GameObject leftSibling;
     public GameObject topSibling;
-    public Point offsets;
+    public RealOffsets offsets;
 }

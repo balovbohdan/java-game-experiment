@@ -1,10 +1,11 @@
 package lib.map.configParser;
 
 import gameObjectsSystem.MapPoint;
+import lib.gameObjectPosition.offsets.RealChainingOffsets;
+import lib.gameObjectPosition.offsets.RealOffsets;
 import lib.map.ConfigItem;
 import lib.map.ConfigItems;
 
-import java.awt.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,12 +49,12 @@ class RowsDataParser {
     }
 
     private void addParamsToLastConfigItems(String configLine) {
-        Point offsets = this.extractGameObjectOffsets(configLine);
+        RealOffsets offsets = this.extractGameObjectOffsets(configLine);
 
         this.updateLastConfigItem(offsets);
     }
 
-    private Point extractGameObjectOffsets(String configLine) {
+    private RealOffsets extractGameObjectOffsets(String configLine) {
         Pattern pattern = Pattern.compile("(?i)^ {4}- \\w+: (.+)");
         Matcher matcher = pattern.matcher(configLine);
 
@@ -66,7 +67,7 @@ class RowsDataParser {
 
         int xOffset = Integer.parseInt(result);
 
-        return new Point(xOffset, 0);
+        return new RealChainingOffsets(xOffset, 0);
     }
 
     private void addToConfigItems(int row, int col, String configLine) {
@@ -75,7 +76,7 @@ class RowsDataParser {
         this.configItems.add(item);
     }
 
-    private void updateLastConfigItem(Point offsets) {
+    private void updateLastConfigItem(RealOffsets offsets) {
         ConfigItem lastConfigItem = this.configItems.getLast();
 
         lastConfigItem.setOffsets(offsets);

@@ -1,4 +1,4 @@
-package lib.dimensions;
+package lib.gameObjectDimensions;
 
 /**
  * Virtual dimension represents sizes of game object at pseudo-3d game world.

@@ -1,7 +1,7 @@
 package gameObjectsSystem.gameObjects.grass.spriteSheet;
 
 import gameObjectsSystem.gameObjects.grass.Grass;
-import lib.dimensions.RealDimension;
+import lib.gameObjectDimensions.RealDimension;
 import lib.spriteSheetManager.SpriteSheetManager;
 
 import java.awt.*;

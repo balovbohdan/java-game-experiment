@@ -3,10 +3,11 @@ package gameObjectsSystem.gameObjects.cube;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.cube.spriteSheet.SpriteSheet;
-import lib.dimensions.RealDimension;
-import lib.dimensions.VirtualDimension;
+import lib.gameObjectDimensions.RealDimension;
+import lib.gameObjectDimensions.VirtualDimension;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
+import lib.gameObjectPosition.offsets.RealChainingOffsets;
 
 import java.awt.*;
 import java.io.IOException;
@@ -47,8 +48,8 @@ public class Cube extends GameObject {
         graphics.drawImage(image, x, y, null);
     }
 
-    public Point getChainingOffsets() {
-        return new Point(-32, -32);
+    public RealChainingOffsets getChainingOffsets() {
+        return new RealChainingOffsets(-32, -32);
     }
 
     private int getX() {

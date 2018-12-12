@@ -5,8 +5,8 @@ import game.window.Window;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.GameObjects;
 import gameObjectsSystem.gameObjects.map.gameObjectsFactory.GameObjectsFactory;
-import lib.dimensions.RealDimension;
-import lib.dimensions.VirtualDimension;
+import lib.gameObjectDimensions.RealDimension;
+import lib.gameObjectDimensions.VirtualDimension;
 import lib.coords.IsometricCoords;
 
 import java.awt.*;

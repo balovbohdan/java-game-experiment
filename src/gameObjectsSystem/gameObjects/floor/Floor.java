@@ -5,8 +5,9 @@ import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.floor.spriteSheet.SpriteSheet;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
-import lib.dimensions.RealDimension;
-import lib.dimensions.VirtualDimension;
+import lib.gameObjectDimensions.RealDimension;
+import lib.gameObjectDimensions.VirtualDimension;
+import lib.gameObjectPosition.offsets.RealChainingOffsets;
 
 import java.awt.*;
 import java.io.IOException;
@@ -47,8 +48,8 @@ public class Floor extends GameObject {
         graphics.drawImage(image, x, y, null);
     }
 
-    public Point getChainingOffsets() {
-        return new Point(-32, 0);
+    public RealChainingOffsets getChainingOffsets() {
+        return new RealChainingOffsets(-32, 0);
     }
 
     private int getX() {
