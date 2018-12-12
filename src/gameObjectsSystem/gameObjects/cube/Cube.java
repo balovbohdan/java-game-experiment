@@ -3,6 +3,7 @@ package gameObjectsSystem.gameObjects.cube;
 import game.Game;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.cube.spriteSheet.SpriteSheet;
+import lib.dimensions.RealDimension;
 import lib.dimensions.VirtualDimension;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
@@ -27,8 +28,8 @@ public class Cube extends GameObject {
         return this.getInitialCoords();
     }
 
-    public Dimension getRealDimension() {
-        return new Dimension(128,128);
+    public RealDimension getRealDimension() {
+        return new RealDimension(128,128);
     }
 
     public VirtualDimension getVirtualDimension() {

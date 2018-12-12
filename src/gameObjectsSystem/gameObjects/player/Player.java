@@ -6,6 +6,7 @@ import gameObjectsSystem.gameObjects.player.spriteSheet.SpriteSheet;
 import lib.coords.CartesianCoords;
 import lib.coords.Coords;
 import lib.coords.IsometricCoords;
+import lib.dimensions.RealDimension;
 import lib.dimensions.VirtualDimension;
 import lib.eventsManagers.keyboard.KeyboardMap;
 
@@ -36,8 +37,8 @@ public class Player extends GameObject {
         return this.coordsManager.getCoords();
     }
 
-    public Dimension getRealDimension() {
-        return new Dimension(299, 240);
+    public RealDimension getRealDimension() {
+        return new RealDimension(299, 240);
     }
 
     public VirtualDimension getVirtualDimension() {

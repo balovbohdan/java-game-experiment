@@ -1,6 +1,7 @@
 package gameObjectsSystem.gameObjects.floor.spriteSheet;
 
 import gameObjectsSystem.gameObjects.floor.Floor;
+import lib.dimensions.RealDimension;
 import lib.spriteSheetManager.SpriteSheetManager;
 
 import java.awt.*;
@@ -27,10 +28,10 @@ public class SpriteSheet {
     }
 
     private static Params createParams(Floor floor) {
-        Dimension dimension = floor.getRealDimension();
+        RealDimension dimension = floor.getRealDimension();
 
-        int width = (int) dimension.getWidth();
-        int height = (int) dimension.getHeight();
+        int width = dimension.getWidth();
+        int height = dimension.getHeight();
 
         return new Params(width, height);
     }

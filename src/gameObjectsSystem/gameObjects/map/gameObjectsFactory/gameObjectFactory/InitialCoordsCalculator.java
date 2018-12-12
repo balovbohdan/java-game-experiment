@@ -2,6 +2,7 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import gameObjectsSystem.GameObject;
 import lib.coords.CartesianCoords;
+import lib.dimensions.RealDimension;
 
 import java.awt.*;
 
@@ -46,7 +47,7 @@ class InitialCoordsCalculator {
         if (this.leftSibling == null)
             return 0;
 
-        Dimension dimension = this.leftSibling.getRealDimension();
+        RealDimension dimension = this.leftSibling.getRealDimension();
 
         int x = this.leftSibling
             .getCoords()
@@ -62,7 +63,7 @@ class InitialCoordsCalculator {
         if (this.topSibling == null)
             return 0;
 
-        Dimension dimension = this.topSibling.getRealDimension();
+        RealDimension dimension = this.topSibling.getRealDimension();
 
         int y = this.topSibling
             .getCoords()

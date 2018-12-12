@@ -5,6 +5,7 @@ import game.window.Window;
 import gameObjectsSystem.GameObject;
 import gameObjectsSystem.GameObjects;
 import gameObjectsSystem.gameObjects.map.gameObjectsFactory.GameObjectsFactory;
+import lib.dimensions.RealDimension;
 import lib.dimensions.VirtualDimension;
 import lib.coords.IsometricCoords;
 
@@ -22,11 +23,11 @@ public class Map extends GameObject {
         return new IsometricCoords(0, 0);
     }
 
-    public Dimension getRealDimension() {
+    public RealDimension getRealDimension() {
         int width = this.getWindowWidth();
         int height = this.getWindowHeight();
 
-        return new Dimension(width, height);
+        return new RealDimension(width, height);
     }
 
     public VirtualDimension getVirtualDimension() {

@@ -5,6 +5,7 @@ import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.grass.spriteSheet.SpriteSheet;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
+import lib.dimensions.RealDimension;
 import lib.dimensions.VirtualDimension;
 
 import java.awt.*;
@@ -27,8 +28,8 @@ public class Grass extends GameObject {
         return this.getInitialCoords();
     }
 
-    public Dimension getRealDimension() {
-        return new Dimension(256, 150);
+    public RealDimension getRealDimension() {
+        return new RealDimension(256, 150);
     }
 
     public VirtualDimension getVirtualDimension() {

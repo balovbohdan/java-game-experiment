@@ -1,6 +1,7 @@
 package gameObjectsSystem.gameObjects.grass.spriteSheet;
 
 import gameObjectsSystem.gameObjects.grass.Grass;
+import lib.dimensions.RealDimension;
 import lib.spriteSheetManager.SpriteSheetManager;
 
 import java.awt.*;
@@ -27,10 +28,10 @@ public class SpriteSheet {
     }
 
     private static Params createParams(Grass grass) {
-        Dimension dimension = grass.getRealDimension();
+        RealDimension dimension = grass.getRealDimension();
 
-        int width = (int) dimension.getWidth();
-        int height = (int) dimension.getHeight();
+        int width = dimension.getWidth();
+        int height = dimension.getHeight();
 
         return new Params(width, height);
     }

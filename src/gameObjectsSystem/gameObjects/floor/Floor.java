@@ -5,6 +5,7 @@ import gameObjectsSystem.GameObject;
 import gameObjectsSystem.gameObjects.floor.spriteSheet.SpriteSheet;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
+import lib.dimensions.RealDimension;
 import lib.dimensions.VirtualDimension;
 
 import java.awt.*;
@@ -27,8 +28,8 @@ public class Floor extends GameObject {
         return this.getInitialCoords();
     }
 
-    public Dimension getRealDimension() {
-        return new Dimension(128, 64);
+    public RealDimension getRealDimension() {
+        return new RealDimension(128, 64);
     }
 
     public VirtualDimension getVirtualDimension() {

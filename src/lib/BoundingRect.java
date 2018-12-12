@@ -1,12 +1,12 @@
 package lib;
 
 import lib.coords.IsometricCoords;
+import lib.dimensions.RealDimension;
 
-import java.awt.*;
 import javax.swing.*;
 
 public class BoundingRect {
-    public BoundingRect(IsometricCoords coords, Dimension dimension, JFrame jframe) {
+    public BoundingRect(IsometricCoords coords, RealDimension dimension, JFrame jframe) {
         this.jframe = jframe;
         this.dimension = dimension;
         this.coords = coords;
@@ -37,11 +37,11 @@ public class BoundingRect {
     }
 
     public int getWidth() {
-        return (int) this.dimension.getWidth();
+        return this.dimension.getWidth();
     }
 
     public int getHeight() {
-        return (int) this.dimension.getHeight();
+        return this.dimension.getHeight();
     }
 
     private int getJFrameWidth() {
@@ -54,5 +54,5 @@ public class BoundingRect {
 
     private IsometricCoords coords;
     private JFrame jframe;
-    private Dimension dimension;
+    private RealDimension dimension;
 }

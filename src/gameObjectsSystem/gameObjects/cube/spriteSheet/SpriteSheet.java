@@ -1,6 +1,7 @@
 package gameObjectsSystem.gameObjects.cube.spriteSheet;
 
 import gameObjectsSystem.gameObjects.cube.Cube;
+import lib.dimensions.RealDimension;
 import lib.spriteSheetManager.SpriteSheetManager;
 
 import java.awt.*;
@@ -27,10 +28,10 @@ public class SpriteSheet {
     }
 
     private static Params createParams(Cube cube) {
-        Dimension dimension = cube.getRealDimension();
+        RealDimension dimension = cube.getRealDimension();
 
-        int width = (int) dimension.getWidth();
-        int height = (int) dimension.getHeight();
+        int width = dimension.getWidth();
+        int height = dimension.getHeight();
 
         return new Params(width, height);
     }

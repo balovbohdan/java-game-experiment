@@ -2,9 +2,7 @@ package gameObjectsSystem.gameObjects.map.gameObjectsFactory.gameObjectFactory;
 
 import game.Game;
 import gameObjectsSystem.GameObject;
-import gameObjectsSystem.MapPoint;
 import lib.coords.CartesianCoords;
-import lib.coords.IsometricCoords;
 
 import java.awt.*;
 import java.lang.reflect.Constructor;
@@ -20,7 +18,6 @@ public class GameObjectFactory {
         this.name = data.name;
         this.game = data.game;
         this.offsets = data.offsets;
-        this.mapPoint = data.mapPoint;
         this.topSibling = data.topSibling;
         this.leftSibling = data.leftSibling;
     }
@@ -52,7 +49,6 @@ public class GameObjectFactory {
 
     private Game game;
     private String name;
-    private MapPoint mapPoint;
     private Point offsets;
 
     private GameObject topSibling;
