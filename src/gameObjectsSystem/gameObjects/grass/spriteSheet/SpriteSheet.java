@@ -27,7 +27,7 @@ public class SpriteSheet {
     }
 
     private static Params createParams(Grass grass) {
-        Dimension dimension = grass.getDimension();
+        Dimension dimension = grass.getRealDimension();
 
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();

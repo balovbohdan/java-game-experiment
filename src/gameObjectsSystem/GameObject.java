@@ -2,6 +2,7 @@ package gameObjectsSystem;
 
 import game.Game;
 import lib.BoundingRect;
+import lib.dimensions.VirtualDimension;
 import lib.coords.CartesianCoords;
 import lib.coords.IsometricCoords;
 
@@ -11,8 +12,10 @@ import java.awt.*;
 public abstract class GameObject {
     public abstract void update();
     public abstract void render(Graphics graphics);
-    public abstract Dimension getDimension();
     public abstract IsometricCoords getCoords();
+
+    public abstract Dimension getRealDimension();
+    public abstract VirtualDimension getVirtualDimension();
 
     public GameObject(Game game) {
         this.game = game;
@@ -26,14 +29,10 @@ public abstract class GameObject {
 
     public BoundingRect getBoundingRect() {
         IsometricCoords coords = this.getCoords();
-        Dimension dimension = this.getDimension();
+        Dimension dimension = this.getRealDimension();
         JFrame jframe = (JFrame) this.getWindow();
 
         return new BoundingRect(coords, dimension, jframe);
-    }
-
-    public void setInitialCoords(CartesianCoords initialCoords) {
-        this.initialCoords = this.prepareInitialCoords(initialCoords);
     }
 
     /**
@@ -46,12 +45,16 @@ public abstract class GameObject {
         return new Point(0, 0);
     }
 
-    protected Game getGame() {
-        return this.game;
+    public void setInitialCoords(CartesianCoords initialCoords) {
+        this.initialCoords = this.prepareInitialCoords(initialCoords);
     }
 
     protected IsometricCoords getInitialCoords() {
         return this.initialCoords;
+    }
+
+    protected Game getGame() {
+        return this.game;
     }
 
     private IsometricCoords prepareInitialCoords(CartesianCoords initialCoords) {

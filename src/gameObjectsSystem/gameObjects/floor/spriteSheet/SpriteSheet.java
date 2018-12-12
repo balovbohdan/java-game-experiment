@@ -27,7 +27,7 @@ public class SpriteSheet {
     }
 
     private static Params createParams(Floor floor) {
-        Dimension dimension = floor.getDimension();
+        Dimension dimension = floor.getRealDimension();
 
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();

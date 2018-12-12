@@ -46,7 +46,7 @@ class InitialCoordsCalculator {
         if (this.leftSibling == null)
             return 0;
 
-        Dimension dimension = this.leftSibling.getDimension();
+        Dimension dimension = this.leftSibling.getRealDimension();
 
         int x = this.leftSibling
             .getCoords()
@@ -62,7 +62,7 @@ class InitialCoordsCalculator {
         if (this.topSibling == null)
             return 0;
 
-        Dimension dimension = this.topSibling.getDimension();
+        Dimension dimension = this.topSibling.getRealDimension();
 
         int y = this.topSibling
             .getCoords()

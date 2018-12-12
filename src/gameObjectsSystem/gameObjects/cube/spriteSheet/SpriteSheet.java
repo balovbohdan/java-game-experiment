@@ -27,7 +27,7 @@ public class SpriteSheet {
     }
 
     private static Params createParams(Cube cube) {
-        Dimension dimension = cube.getDimension();
+        Dimension dimension = cube.getRealDimension();
 
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
